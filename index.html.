@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>for prisha 🤍</title>
+  </head>
+  <body>
+    <main>
+      <h1>for prisha, whenever she wakes up 🤍</h1>
+
+      <p id="clock" aria-live="off"></p>
+      <p>whatever time it is, i'm glad you're here.</p>
+
+      <img src="paper-flower.jpg" alt="A paper flower made for you" />
+      <p>here's a paper flower for you again 🌸</p>
+
+      <p>i hope someone didn't wake up sad today.</p>
+      <p>good morning baby 🤍</p>
+    </main>
+
+    <script>
+      const clock = document.getElementById("clock");
+
+      function updateClock() {
+        clock.textContent = new Intl.DateTimeFormat(undefined, {
+          hour: "numeric",
+          minute: "2-digit",
+          second: "2-digit",
+        }).format(new Date());
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
+</html>
